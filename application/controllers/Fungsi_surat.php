@@ -20,9 +20,9 @@ class Fungsi_surat extends CI_Controller
             $this->load->view('template/' . $this->session->userdata('user')['level'] . '/header');
             $this->load->view('footer');
             $this->load->view('modal');
-        } else {
-            redirect(base_url('authentication/login'));
+            return;
         }
+            redirect(base_url('authentication/login'));
     }
 
     function tambah_datasurat()
