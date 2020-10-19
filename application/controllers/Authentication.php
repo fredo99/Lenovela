@@ -33,7 +33,6 @@ class Authentication extends CI_Controller
 
                 if ($user) {
                     if (password_verify($password, $user['password'])) {
-                        // if ($password == $user['password']) {
                         switch ($user['level']) {
                             case 0:
                                 $user_level = 'admin';
