@@ -1,14 +1,14 @@
-const base_url = window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1];
+const base_url = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
 // const flashdata = $('.flash-data').data('flashdata');
 
 $(document).ready(function() {
 
     $('.dispo-surat').click(function() {
-        var id = $(this).data('id');
+        var id = "$(this).data('id')";
 
         $.ajax({
             type: "POST",
-            url: base_url + '/ajax/cek_dispo/' + id,
+            url: "base_url + '/ajax/cek_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
