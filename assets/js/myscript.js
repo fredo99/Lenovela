@@ -64,7 +64,7 @@ $(document).ready(function() {
         const Swal = require("sweetalert2");
 
         e.preventDefault();
-        id = "$(this).data('id')";
+        id = $(this).data('id');
 
         const href = "$(this).attr('href')";
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
         $("#profile #email").attr("disabled", true);
     });
     $("#ubah-password").click(function(e) {
-        if ($(this).data("btn") == "edit") {
+        if ($(this).data("btn") === "edit") {
             e.preventDefault();
             $(this).val("Simpan Password");
             $(this).removeClass("btn-primary");
@@ -142,7 +142,7 @@ $(document).ready(function() {
     });
 
 
-    $('.hapus-kepala').on('click', function(e) {
+    $(".hapus-kepala").on('click', function(e) {
 
         e.preventDefault();
         nip = $(this).data('nip');
@@ -162,9 +162,9 @@ $(document).ready(function() {
             if (result.value) {
                 document.location.href = href;
                 Swal.fire(
-                    'Berhasil Dihapus!',
-                    'Data tidak Berhasil Dihapus',
-                    'success'
+                    "Berhasil Dihapus!",
+                    "Data tidak Berhasil Dihapus",
+                    "success"
                 )
             }
         });
@@ -190,11 +190,12 @@ $(document).ready(function() {
                 var isAllChecked = 0;
 
                 $(".ceksatu").each(function() {
-                    if (!this.checked)
+                    if (!this.checked) {
                         isAllChecked = 1;
+                    }
                 });
 
-                if (isAllChecked == 0) {
+                if (isAllChecked === 0) {
                     $(".pilihsemua").prop("checked", true);
                 }
             } else {
