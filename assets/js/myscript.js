@@ -75,9 +75,9 @@ $(document).ready(function() {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: 'hayolohh'
+            confirmButtonText: "ya,Hapus"
         }).then((result) => {
-            if (result.isConfirmed) {
+            if (result.value) {
                 document.location.href = href;
                 Swal.fire(
                     'Berhasil Dihapus!',
