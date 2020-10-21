@@ -1,4 +1,4 @@
-const Base_url = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
+const baseUrl = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
 // const flashdata = $('.flash-data').data('flashdata');
 
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "Base_url + '/ajax/cek_dispo/' + id",
+            url: "baseUrl + '/ajax/cek_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "Base_url + '/ajax/batal_dispo/' + id",
+            url: "baseUrl + '/ajax/batal_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
@@ -91,7 +91,7 @@ $(document).ready(function() {
     });
 
     $("#edit-profile").click(function(e) {
-        if ($(this).data("btn") == "edit") {
+        if ($(this).data("btn") === "edit") {
             e.preventDefault();
             $(this).val("Simpan Profil");
             $(this).removeClass("btn-primary");
