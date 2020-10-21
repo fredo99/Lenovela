@@ -84,7 +84,7 @@ class Profile extends CI_Controller
     public function ubah_password()
     {
         $where = $this->session->userdata('user')['nip'];
-        $query = $this->db->query("SELECT password FROM users WHERE nip='$where' ");
+        $this->db->query("SELECT password FROM users WHERE nip='$where' ");
         // $old_password = $query->result();
         // $passlama = $this->input->post('passlama');
         $baru = $this->input->post('passbaru');
