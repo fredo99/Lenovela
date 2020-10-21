@@ -22,7 +22,7 @@ class Authentication extends CI_Controller
             if ($this->form_validation->run() == false) {
 
                 $this->load->view('authentication/login');
-            } else {
+            }
                 $username = $this->input->post('username');
                 $password = $this->input->post('password');
 
@@ -67,7 +67,6 @@ class Authentication extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun tidak teregistrasi!</div>');
                     redirect(base_url('authentication/login'));
                 }
-            }
         } else {
             redirect(base_url());
         }

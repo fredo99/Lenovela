@@ -31,7 +31,7 @@ class Fungsi_surat extends CI_Controller
         $tanggal = $this->input->post('tanggal');
         $file = $_FILES['file'];
         if ($file = '') {
-        } else {
+        } 
             $config['upload_path'] = './assets/uploads';
             $config['allowed_types'] = 'pdf|docx|doc';
 
@@ -42,7 +42,6 @@ class Fungsi_surat extends CI_Controller
                 $file = $this->upload->data('file_name');
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>');
             }
-        }
         $status = $this->input->post('status');
 
         $data = array(
@@ -56,9 +55,9 @@ class Fungsi_surat extends CI_Controller
         redirect(base_url('/surat'));
     }
 
-    function update_surat($id)
+    function update_surat($ids)
     {
-        $where = array('id' => $id);
+        $where = array('id' => $ids);
         $query = $this->db->get_where('surat', $where);
         $row = $query->row();
         $surat = $this->input->post('surat');
@@ -94,9 +93,9 @@ class Fungsi_surat extends CI_Controller
         redirect(base_url('/surat'));
     }
 
-    function delete_surat($id)
+    function delete_surat($ids)
     {
-        $where = array('id' => $id);
+        $where = array('id' => $ids);
         $query = $this->db->get_where('surat', $where);
         $row = $query->row();
 

@@ -18,9 +18,8 @@ class Profile extends CI_Controller
             $data['user'] = $this->m_profile->getByid()->result()[0];
             $this->load->view('profile/' . $this->session->userdata('user')['level'] . '/profile', $data);
             $this->load->view('modal');
-        } else {
-            redirect(base_url('authentication/login'));
         }
+            redirect(base_url('authentication/login'));
     }
 
     public function update_profile()
@@ -45,7 +44,6 @@ class Profile extends CI_Controller
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('foto')) {
                 echo "Upload Gagal";
-                die();
             } else {
                 unlink("./assets/uploads/img/$row->foto");
                 $foto = $this->upload->data("file_name");

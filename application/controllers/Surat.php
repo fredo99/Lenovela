@@ -22,9 +22,8 @@ class Surat extends CI_Controller
 
             $this->load->view('surat/' . $this->session->userdata('user')['level'] . '/surat', $data);
             $this->load->view('modal');
-        } else {
+        } 
             redirect(base_url('authentication/login'));
-        }
     }
 
     public function dispo_surat()

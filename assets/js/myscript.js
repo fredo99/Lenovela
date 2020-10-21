@@ -35,7 +35,7 @@ $(document).ready(function() {
             type: "POST",
             url: "baseUrl + '/ajax/batal_dispo/' + id",
             dataType: "JSON",
-            success: function(response) {
+            success(response) {
                 if (response) {
                     $(".pilihsemua").removeAttr("disabled");
                     $(".ceksatu").removeAttr("disabled");
@@ -83,7 +83,7 @@ $(document).ready(function() {
                     "Berhasil Dihapus!",
                     "Data tidak Berhasil Dihapus",
                     "success"
-                )
+                );
             }
         });
 

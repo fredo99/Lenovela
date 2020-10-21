@@ -21,9 +21,8 @@ class Kepala extends CI_Controller
             $data['kepala'] = $this->m_kepala->hanya_kepala()->result();
             $this->load->view('kepala/' . $this->session->userdata('user')['level'] . '/kepala', $data);
             $this->load->view('modal');
-        } else {
-            redirect(base_url('authentication/login'));
         }
+            redirect(base_url('authentication/login'));
     }
 
     function tambah_kepala()

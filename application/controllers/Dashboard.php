@@ -20,8 +20,7 @@ class Dashboard extends CI_Controller
                         $data['kepala'] = $this->m_kepala->hanya_kepala()->result();
                         $this->load->view('dashboard/' . $this->session->userdata('user')['level'], $data);
                         $this->load->view('modal');
-                } else {
-                        redirect(base_url('authentication/login'));
                 }
+                        redirect(base_url('authentication/login'));
         }
 }

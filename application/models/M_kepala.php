@@ -31,9 +31,9 @@ class M_kepala extends CI_Model
         return $query;
     }
 
-    public function update_kepala($data, $id)
+    public function update_kepala($data, $ids)
     {
-        $this->db->where('id', $id);
+        $this->db->where('id', $ids);
         $this->db->update('users', $data);
         return true;
     }

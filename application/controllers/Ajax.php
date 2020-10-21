@@ -7,13 +7,13 @@ class Ajax extends CI_Controller
         $this->load->model('m_surat');
 
         $nip = $this->input->post('nip');
-        $id = $this->input->post('id_surat');
+        $ids = $this->input->post('id_surat');
         $memo = $this->input->post('memo');
         $data = array();
         foreach ($nip as $datanip) {
             array_push($data, array(
                 'nip' => $datanip,
-                'id' => $id,
+                'id' => $ids,
                 'memo' => $memo
 
             ));
@@ -23,24 +23,24 @@ class Ajax extends CI_Controller
         redirect(base_url('surat'));
     }
 
-    public function batal_dispo($id)
+    public function batal_dispo($ids)
     {
         $this->load->model('m_surat');
-        $where = array('id' => $id);
+        $where = array('id' => $ids);
         $this->db->get_where('display_surat', $where);
 
         $this->m_surat->delete_surat($where, 'display_surat');
 
         if ($this->db->affected_rows()) {
             echo 1;
-        } else {
-            echo 0;
+            return;
         }
+            echo 0;
     }
 
-    public function cek_dispo($id)
+    public function cek_dispo($ids)
     {
-        $check = $this->db->query("SELECT id FROM display_surat WHERE id='$id'")->num_rows();
+        $check = $this->db->query("SELECT id FROM display_surat WHERE id='$ids'")->num_rows();
         echo json_encode($check);
     }
 }
