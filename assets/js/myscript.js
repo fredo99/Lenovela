@@ -1,4 +1,4 @@
-const base_url = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
+const Base_url = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
 // const flashdata = $('.flash-data').data('flashdata');
 
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "base_url + '/ajax/cek_dispo/' + id",
+            url: "Base_url + '/ajax/cek_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
@@ -29,11 +29,11 @@ $(document).ready(function() {
         });
     });
     $(".batal-dispo").click(function() {
-        var id = $(this).data('id');
+        var id = "$(this).data('id')";
 
         $.ajax({
             type: "POST",
-            url: "base_url + '/ajax/batal_dispo/' + id",
+            url: "Base_url + '/ajax/batal_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
@@ -59,9 +59,9 @@ $(document).ready(function() {
     //     });
     // }
 
-    tombol - hapus
-    $(".hapus-surat").on('click', function(e) {
-        const Swal = require('sweetalert2');
+    //tombol - hapus
+    $(".hapus-surat").on("click", function(e) {
+        const Swal = require("sweetalert2");
 
         e.preventDefault();
         id = "$(this).data('id')";
@@ -80,9 +80,9 @@ $(document).ready(function() {
             if (result.value) {
                 document.location.href = href;
                 Swal.fire(
-                    'Berhasil Dihapus!',
-                    'Data tidak Berhasil Dihapus',
-                    'success'
+                    "Berhasil Dihapus!",
+                    "Data tidak Berhasil Dihapus",
+                    "success"
                 )
             }
         })
@@ -148,15 +148,16 @@ $(document).ready(function() {
         nip = $(this).data('nip');
 
         const href = $(this).attr('href');
+        const Swal = require('sweetalert2');
 
         Swal.fire({
-            title: 'Apakah Anda Yakin?',
+            title: "Apakah Anda Yakin?",
             text: "Data Kepala akan dihapus!",
-            icon: 'warning',
+            icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya, hapus'
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, hapus"
         }).then((result) => {
             if (result.value) {
                 document.location.href = href;
