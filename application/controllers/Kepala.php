@@ -87,10 +87,9 @@ class Kepala extends CI_Controller
                 $this->m_kepala->input_kepala($data, 'users');
                 $this->session->set_flashdata('pluskepala', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>');
                 redirect(base_url('/kepala'));
-            } else {
+            }
                 $this->session->set_flashdata('pluskepala', '<div class="alert alert-danger" role="alert">Data Tidak Berhasil Disimpan</div>');
                 redirect(base_url('/kepala'));
-        }
     }
 
     function delete_kepala($nip)

@@ -44,14 +44,12 @@ class Profile extends CI_Controller
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('foto')) {
                 echo "Upload Gagal";
-            } else {
+            }
                 unlink("./assets/uploads/img/$row->foto");
                 $foto = $this->upload->data("file_name");
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>');
-            }
-        } else {
+        } 
             $foto = $this->input->post('old_foto');
-        }
 
         $data = array(
             'jabatan' => $jabatan,

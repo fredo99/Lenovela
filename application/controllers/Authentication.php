@@ -62,13 +62,11 @@ class Authentication extends CI_Controller
                     }
                         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password yang anda masukkan salah!</div>');
                         redirect(base_url('authentication/login'));
-                } else {
+                }
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun tidak teregistrasi!</div>');
                     redirect(base_url('authentication/login'));
-                }
-        } else {
-            redirect(base_url());
         }
+            redirect(base_url());
     }
 
     public function logout()
