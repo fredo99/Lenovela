@@ -165,7 +165,7 @@ $(document).ready(function() {
                     "Berhasil Dihapus!",
                     "Data tidak Berhasil Dihapus",
                     "success"
-                )
+                );
             }
         });
 

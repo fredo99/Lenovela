@@ -38,10 +38,9 @@ class Fungsi_surat extends CI_Controller
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('file')) {
                 echo "Upload Gagal";
-            } else {
+            }
                 $file = $this->upload->data('file_name');
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>');
-            }
         $status = $this->input->post('status');
 
         $data = array(
@@ -57,7 +56,8 @@ class Fungsi_surat extends CI_Controller
 
     function update_surat($ids)
     {
-        $where = array('id' => $ids);
+        $idsurat = $ids;
+        $where = array('id' => $idsurat);
         $query = $this->db->get_where('surat', $where);
         $row = $query->row();
         $surat = $this->input->post('surat');

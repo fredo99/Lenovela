@@ -33,7 +33,7 @@ class Kepala extends CI_Controller
         if ($cek_nip > 0) {
             $this->session->set_flashdata('cek_nip', '<div class="alert alert-danger" role="alert">Nip sudah pernah digunakan sebelumnya</div>');
             redirect(base_url('/kepala'));
-        } else {
+        }
             $password = random_string('md5');
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
             $jabatan = $this->input->post('jabatan');
@@ -90,7 +90,6 @@ class Kepala extends CI_Controller
             } else {
                 $this->session->set_flashdata('pluskepala', '<div class="alert alert-danger" role="alert">Data Tidak Berhasil Disimpan</div>');
                 redirect(base_url('/kepala'));
-            }
         }
     }
 

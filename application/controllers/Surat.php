@@ -29,13 +29,13 @@ class Surat extends CI_Controller
     public function dispo_surat()
     {
         $nip = $this->input->post('nip');
-        $id = $this->input->post('id_surat');
+        $ids = $this->input->post('id_surat');
         $memo = $this->input->post('memo');
         $data = array();
         foreach ($nip as $datanip) {
             array_push($data, array(
                 'nip' => $datanip,
-                'id' => $id,
+                'id' => $ids,
                 'memo' => $memo
 
             ));
