@@ -11,7 +11,7 @@ $(document).ready(function() {
             type: "POST",
             url: "baseUrl + '/ajax/cek_dispo/' + id",
             dataType: "JSON",
-            success: function(response) {
+            success(response) {
                 if (response) {
                     $(".pilihsemua").attr("disabled", true);
                     $(".ceksatu").attr("disabled", true);
@@ -64,7 +64,7 @@ $(document).ready(function() {
         const Swal = require("sweetalert2");
 
         e.preventDefault();
-        id = $(this).data('id');
+        var id = "$(this).data('id')";
 
         const href = "$(this).attr('href')";
 
@@ -142,13 +142,13 @@ $(document).ready(function() {
     });
 
 
-    $(".hapus-kepala").on('click', function(e) {
+    $(".hapus-kepala").on("click", function(e) {
 
         e.preventDefault();
-        nip = $(this).data('nip');
+        var nip = "$(this).data('nip')";
 
-        const href = $(this).attr('href');
-        const Swal = require('sweetalert2');
+        const href = "$(this).attr('href')";
+        const Swal = "require('sweetalert2')";
 
         Swal.fire({
             title: "Apakah Anda Yakin?",
