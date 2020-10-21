@@ -27,12 +27,12 @@ $(document).ready(function() {
             }
         });
     });
-    $('.batal-dispo').click(function() {
+    $(".batal-dispo").click(function() {
         var id = $(this).data('id');
 
         $.ajax({
             type: "POST",
-            url: base_url + '/ajax/batal_dispo/' + id,
+            url: "base_url + '/ajax/batal_dispo/' + id",
             dataType: "JSON",
             success: function(response) {
                 if (response) {
@@ -59,10 +59,10 @@ $(document).ready(function() {
     // }
 
     //tombol-hapus
-    $('.hapus-surat').on('click', function(e) {
+    $(".hapus-surat").on('click', function(e) {
 
         e.preventDefault();
-        id = $(this).data('id');
+        id = "$(this).data('id')";
 
         const href = $(this).attr('href');
 
