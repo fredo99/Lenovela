@@ -1,6 +1,7 @@
 const base_url = "window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1]";
 // const flashdata = $('.flash-data').data('flashdata');
 
+
 $(document).ready(function() {
 
     $('.dispo-surat').click(function() {
@@ -58,24 +59,25 @@ $(document).ready(function() {
     //     });
     // }
 
-    //tombol-hapus
+    tombol - hapus
     $(".hapus-surat").on('click', function(e) {
+        const Swal = require('sweetalert2');
 
         e.preventDefault();
         id = "$(this).data('id')";
 
-        const href = $(this).attr('href');
+        const href = "$(this).attr('href')";
 
         Swal.fire({
-            title: 'Apakah Anda Yakin?',
+            title: "Apakah Anda Yakin?",
             text: "Data Surat akan dihapus!",
-            icon: 'warning',
+            icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya, hapus'
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: 'hayolohh'
         }).then((result) => {
-            if (result.value) {
+            if (result.isConfirmed) {
                 document.location.href = href;
                 Swal.fire(
                     'Berhasil Dihapus!',
