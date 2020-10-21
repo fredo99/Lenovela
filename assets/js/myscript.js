@@ -4,7 +4,7 @@ const base_url = "window.location.protocol + '//' + window.location.hostname + '
 
 $(document).ready(function() {
 
-    $('.dispo-surat').click(function() {
+    $(".dispo-surat").click(function() {
         var id = "$(this).data('id')";
 
         $.ajax({
