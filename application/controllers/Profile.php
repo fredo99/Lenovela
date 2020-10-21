@@ -65,9 +65,8 @@ class Profile extends CI_Controller
         if ($this->m_profile->update_profile($data, $where)) {
             $this->session->set_flashdata('up_profile', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>');
             redirect(base_url('/profile'));
-        } else {
-            $this->session->set_flashdata('up_profile', '<div class="alert alert-danger" role="alert">Data Tidak Berhasil Disimpan</div>');
         }
+            $this->session->set_flashdata('up_profile', '<div class="alert alert-danger" role="alert">Data Tidak Berhasil Disimpan</div>');
     }
 
     public function getByid()
