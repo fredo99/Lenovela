@@ -152,9 +152,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?php foreach ($user as $s) : ?>
                                     <span class="mr-2 d-none d-lg-inline
-                                        text-gray-600 small"><?=
-                                                                    $s->nama;
-                                                                ?></span>
+                                        text-gray-600 small"><?= $s->nama;?>
+                                    </span>
                                     <img class="img-profile rounded-circle" src="<?= base_url() . 'assets/uploads/img/' . $s->foto; ?>">
                                 <?php endforeach; ?>
                             </a>

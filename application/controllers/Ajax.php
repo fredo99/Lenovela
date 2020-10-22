@@ -41,6 +41,6 @@ class Ajax extends CI_Controller
     public function cek_dispo($ids)
     {
         $check = $this->db->query("SELECT id FROM display_surat WHERE id='$ids'")->num_rows();
-        echo json_encode($check);
+        json_encode($check);
     }
 }

@@ -13,15 +13,15 @@
     <title>LENOVELA - KEPALA</title>
 
     <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url() ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="<?php echo base_url() ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link rel="manifest" href="<?php echo base_url() ?>manifest.json">
+    <link href="<?= base_url() ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="manifest" href="<?= base_url() ?>manifest.json">
 
 
 </head>
@@ -37,7 +37,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center
-                    justify-content-center" href="<?php echo base_url(); ?>dashboard">
+                    justify-content-center" href="<?= base_url(); ?>dashboard">
                 <div class="sidebar-brand-icon">
                     <i><img src="<?= base_url() . 'assets/img/logo.png' ?>" width="70%"></i></img>
                 </div>
@@ -49,7 +49,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>dashboard">
+                <a class="nav-link" href="<?= base_url(); ?>dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -64,7 +64,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>profile">
+                <a class="nav-link" href="<?= base_url(); ?>profile">
                     <i class="fa fa-user-alt"></i>
                     <span>Profil</span></a>
             </li>
@@ -80,7 +80,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url(); ?>surat">
+                <a class="nav-link" href="<?= base_url(); ?>surat">
                     <i class="fa fa-envelope"></i>
                     <span>Lihat Surat</span></a>
             </li>
@@ -148,7 +148,7 @@
                             <div class="dropdown-menu
                                         dropdown-menu-right shadow
                                         animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="<?php echo base_url() . 'profile'; ?>">
+                                <a class="dropdown-item" href="<?= base_url() . 'profile'; ?>">
                                     <i class="fas fa-user fa-sm fa-fw
                                                 mr-2 text-gray-400"></i> Profil
                                 </a>
@@ -198,16 +198,16 @@
                                         ?>
                                             <tr>
                                                 <th scope="col">
-                                                    <?php echo $no++; ?>
+                                                    <?= $no++; ?>
                                                 </th>
                                                 <th scope="col">
-                                                    <?php echo $s->surat; ?>
+                                                    <?= $s->surat; ?>
                                                 </th>
                                                 <th scope="col">
-                                                    <?php echo date('d F Y', strtotime($s->tanggal)); ?>
+                                                    <?= date('d F Y', strtotime($s->tanggal)); ?>
                                                 </th>
                                                 <th scope="col">
-                                                    <a href="<?php echo base_url() . 'fungsi_surat/lihat_surat/' . $s->file; ?>"><?php echo $s->file; ?></a>
+                                                    <a href="<?= base_url() . 'fungsi_surat/lihat_surat/' . $s->file; ?>"><?= $s->file; ?></a>
                                                 </th>
                                                 <th>
                                                     <?php if ($s->status == 1) {
@@ -251,17 +251,17 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url() ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url() ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url() ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?= base_url() ?>vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url() ?>assets/js/sb-admin-2.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/sb-admin-2.min.js"></script>
     <!-- Page level plugins -->
-    <script src="<?php echo base_url() ?>vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?php echo base_url() ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <!-- Page level custom scripts -->
-    <script src="<?php echo base_url() ?>assets/js/demo/datatables-demo.js"></script>
+    <script src="<?= base_url() ?>assets/js/demo/datatables-demo.js"></script>
 </body>
 
 </html>

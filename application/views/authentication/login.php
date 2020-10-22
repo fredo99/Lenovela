@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SISTEM SURAT - Login</title>
-    <link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url() ?>assets/css/datepicker3.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>assets/css/styles.css" rel="stylesheet">
-    <link rel="manifest" href="<?php echo base_url() ?>manifest.json">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url() ?>images/icons/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="<?php echo base_url() ?>images/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="<?php echo base_url() ?>images/icons/icon-128x128.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url() ?>images/icons/icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url() ?>images/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="<?php echo base_url() ?>images/icons/icon-192x192.png">
-    <link rel="apple-touch-icon" sizes="384x384" href="<?php echo base_url() ?>images/icons/icon-384x384.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="<?php echo base_url() ?>images/icons/icon-512x512.png">
+    <link href="<?= base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>assets/css/datepicker3.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/styles.css" rel="stylesheet">
+    <link rel="manifest" href="<?= base_url() ?>manifest.json">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="<?= base_url() ?>images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="<?= base_url() ?>images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="<?= base_url() ?>images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="<?= base_url() ?>images/icons/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="<?= base_url() ?>images/icons/icon-512x512.png">
 
     <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
@@ -59,8 +59,8 @@
 
 
 
-    <script src="<?php echo base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
